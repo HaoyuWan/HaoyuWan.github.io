@@ -85,6 +85,7 @@ body {
 .image-wrapper1 {
     margin-right: -50px;
     margin-left: 50px;
+    position: relative;
 /*    padding-left: 50px;*/
 }
 
@@ -94,20 +95,23 @@ body {
 }
 .image-text1 {
     position: absolute;
-    bottom: -240px;
-    left: 115px;
+    top: 60px;
+    left: 60px;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     
 }
 .image-text2 {
     position: absolute;
-    bottom: -320px;
-    left: 50px;
+    top: 160px;
+    left: -200px;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Times New Roman", Times, serif;
-    padding: 0 50px;
+    padding: 0 20px;
+    text-align: center;
+    margin-right: 150px;
+    margin-left:200px;
     
 }
 
@@ -123,9 +127,16 @@ body {
     cursor: pointer;
 }
 
+.image-wrapper2{
+    position: relative;
+}
+
 .image-wrapper2 img {
     width: auto;
     height: 65%;
+    position: absolute;
+    top: 0;
+    right: 50px;
 }
 
 .text-container {
@@ -161,7 +172,7 @@ body {
     text-align: center;
     font-size: 30px;
     color: #555;
-    padding: 0 90px;
+    padding: 0 270px;
 }
 
 .author {
