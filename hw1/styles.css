@@ -91,34 +91,33 @@ body {
 
 .image-wrapper1 img {
     width: auto; 
-    height: 65%;
+    height: 100%;
 }
 .image-text1 {
     position: absolute;
-    top: 60px;
-    left: 60px;
+    top: 120px;
+    left: 100px;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     
 }
 .image-text2 {
     position: absolute;
-    top: 160px;
-    left: -200px;
+    top: 260px;
+    left: 120px;
     color: white;
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
-    padding: 0 20px;
     text-align: center;
-    margin-right: 150px;
-    margin-left:200px;
+
+
     
 }
 
 .buttonClass {
     position: absolute;
-    bottom: -400px;
-    left: 105px;
+    bottom: 150px;
+    left: 130px;
     padding: 10px 50px;
     background-color: transparent;
     color: white;
@@ -133,13 +132,14 @@ body {
 
 .image-wrapper2 img {
     width: auto;
-    height: 65%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 50px;
 }
 
 .text-container {
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -162,7 +162,7 @@ body {
 
 .quotation-mark {
     display: block;
-    font-size: 60px;
+    font-size: 150px;
     color: black;
     font-family: Garamond, serif;
 }
