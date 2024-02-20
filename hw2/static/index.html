@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Search</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+</head>
+<body>
+    <div class="search-container">
+        <h1>Stock Search</h1>
+        <div class="search-box">
+            <button type="button" id="searchButton" class="icon-button">
+                <img src="static/search.svg" alt="Search">
+            </button>
+            <input type="text" id="stockSymbol" placeholder="Enter Stock Ticker Symbol" required>
+            <button type="button" id="clearButton" class="icon-button">
+                <img src="static/cross.svg" alt="Clear">
+            </button>
+        </div>
+
+    </div>
+
+
+    <div id="error_search_result">
+        <div class="error_msg">Error : No record has been found, please enter a valid symbol.</div>
+    </div>
+
+
+    <div id="search_result">
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'outlook-content')">Company</button>
+            <button class="tablinks" onclick="openTab(event, 'summary-content')">Stock Summary</button>
+            <button class="tablinks" onclick="openTab(event, 'charts-content')">Charts</button>
+            <button class="tablinks" onclick="openTab(event, 'news-content')">Latest News</button>
+        </div>
+
+        <div id="outlook-content" class="tabcontent">
+            <div id="company-logo">
+                <img id="logo-img" src="" alt="Company Logo">
+            </div>
+            <table id="outlook-table">
+                <tr>
+                    <td class="header">Company Name</td>
+                    <td id="company-name"></td>
+                </tr>
+                <tr>
+                    <td class="header">Stock Ticker Symbol</td>
+                    <td id="stock-symbol"></td>
+                </tr>
+                <tr>
+                    <td class="header">Stock Exchange Code</td>
+                    <td id="exchange-code"></td>
+                </tr>
+                <tr>
+                    <td class="header">Company IPO Date</td>
+                    <td id="ipo-date"></td>
+                </tr>
+                <tr>
+                    <td class="header">Category</td>
+                    <td id="category"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="summary-content" class="tabcontent">
+            <table id="summary-table" class="summary-info">
+                <tr>
+                    <td class="header"><span>Stock Ticker Symbol</span></td>
+                    <td id="summary-symbol"></td>
+                </tr>
+                <tr>
+                    <td class="header">Trading Day</td>
+                    <td id="summary-trading-day"></td>
+                </tr>
+                <tr>
+                    <td class="header">Previous Closing Price</td>
+                    <td id="summary-prev-close"></td>
+                </tr>
+                <tr>
+                    <td class="header">Opening Price</td>
+                    <td id="summary-open"></td>
+                </tr>
+                <tr>
+                    <td class="header">High Price</td>
+                    <td id="summary-high"></td>
+                </tr>
+                <tr>
+                    <td class="header">Low Price</td>
+                    <td id="summary-low"></td>
+                </tr>
+                <tr>
+                    <td class="header">Change</td>
+                    <td id="summary-change"></td>
+                </tr>
+                <tr>
+                    <td class="header">Change Percent</td>
+                    <td id="summary-change-percent"></td>
+                </tr>
+            </table>
+            <div id="recommendation-trends">
+                <span class="recommendation-label" style="color: #f02738">Strong Sell</span>
+
+                <span id="strong-sell" class="recommendation-box strong-sell"></span>
+
+                <span id="sell" class="recommendation-box sell"></span>
+
+                <span id="hold" class="recommendation-box hold"></span>
+
+                <span id="buy" class="recommendation-box buy"></span>
+
+                <span id="strong-buy" class="recommendation-box strong-buy"></span>
+
+                <span class="recommendation-label" style="color: #00ff7e;">Strong Buy</span>
+            </div>
+            <div class="recommendation-title">Recommendation Trends</div>
+
+        </div>
+
+
+        <div id="charts-content" class="tabcontent">
+            <div id="charts-area"></div>
+        </div>
+
+        <div id="news-content" class="tabcontent">
+            <!-- News articles will be inserted dynamically into this div -->
+        </div>
+
+
+    </div>
+    <!-- Include divs for displaying stock info, news, and charts -->
+    <script src="static/script.js"></script>
+</body>
+</html>

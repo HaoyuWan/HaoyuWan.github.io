@@ -1,0 +1,310 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('back.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0.5em 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 50;
+    color: #333;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width:70%;
+
+}
+
+.search-box input[type="text"] {
+    width: 2000px; /* Adjust as needed*/
+    padding: 10px 15px;
+    padding-right: 40px;
+    width: 100%;
+    box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
+    margin: 0 auto; /* This will help center the box if it has a max-width */
+    position: relative;
+}
+
+#stockSymbol {
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline on focus */
+    background-color: transparent;
+    border-right: 2px solid #ccc;
+}
+
+.search-box button {
+    background: transparent;
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    padding: 14px; /* Removes padding to prevent extra space around SVG */
+/*    background-color: transparent;*/
+}
+
+.icon-button {
+  background-color: transparent; /* Remove any default background */
+  cursor: pointer;
+    filter: invert(0.8) sepia(1) saturate(10) hue-rotate(180deg);
+
+}
+
+.icon-button:hover {
+    filter: none;
+
+}
+
+.search-box img {
+    height: 16px; /* Adjusts the height of the SVG icons */
+    width: auto; /* Keeps the aspect ratio of the SVG icons */
+}
+#error_search_result {
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 10px 50px;
+    margin: 10px 500px;
+    text-align: center;
+    display: none;
+}
+#search_result{
+    display: none;
+    margin-bottom: 100px;
+}
+
+.error_msg {
+    color: black;
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 16px;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    margin: 0 350px;
+    background: #fafafa;
+    height: 40px;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+button.tablinks {
+    background: #fafafa;
+    float: left;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    display: inline-block;
+    display: -moz-inline-block;
+    transition: 0.4s;
+}
+
+button.tablinks:hover {
+    background: #ddd;
+}
+
+button.active {
+    background: #ccc;
+}
+
+div.tabcontent {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: none; /*initially hide*/
+}
+
+#outlook-content {
+    display: none; /* Initially hidden */
+    margin-top: 20px; /* Adjust as necessary */
+    text-align: center;
+}
+
+#company-logo img {
+    display: block;
+    margin: 20px auto; /* Centers the logo */
+}
+#logo-img {
+    display: block;
+    margin: 20px auto; /* Centers the logo */
+    width:150px;
+    height: auto; /* This will keep the aspect ratio of the image */
+}
+
+#outlook-table {
+    border-collapse: collapse;
+    margin: 0 auto; /* Centers the table */
+}
+
+#outlook-table td, #outlook-table th {
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* Bottom border for all cells */
+}
+#company-name, #stock-symbol, #exchange-code, #ipo-date, #category{
+    text-align: left;
+    padding-left: 10px;
+}
+.header {
+    text-align: right; /* Right-aligns text in the header cells */
+    font-weight: bold; /* Optional: makes the header text bold */
+    padding-right: 10px; /* Adds some padding to the right of the header text */
+    border-bottom: none; /* Removes the bottom border if not desired */
+}
+
+
+.summary-info {
+    width: 60%; /* Adjust width as necessary */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    border: none;
+    text-align: center;
+    padding: 0 350px;
+}
+
+#summary-content{
+    display: flex;
+    flex-direction: column; /* 设置主轴方向为垂直 */
+    justify-content: center;
+}
+
+.summary-info .header {
+    text-align: right;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Horizontal line under header */
+}
+
+.summary-info td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.change-positive {
+    color: green; /* Or the color for positive values */
+}
+
+.change-negative {
+    color: red; /* Or the color for negative values */
+}
+
+
+#recommendation-trends {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.recommendation-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.recommendation-box {
+    display: flex;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Sample colors for demonstration */
+#strong-sell { background-color: #f02738; }
+#sell { background-color: #b45f4b; }
+#hold { background-color: #79945a; }
+#buy { background-color: #3aca71; }
+#strong-buy { background-color: #00ff7e; }
+
+.recommendation-title {
+    margin-top: 10px; /* Space between the color bar and the title */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.news-card {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa; /* Card background color */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Card shadow */
+    border-radius: 4px; /* Rounded corners for card */
+    margin: 10px 330px;
+}
+
+.news-card img {
+    width: 80px; /* Adjust based on your design */
+    height: 80px; /* Adjust based on your design */
+    margin-right: 15px; /* Space between image and text */
+    object-fit: cover; /* Keep the aspect ratio of the image */
+    padding: 10px 10px;
+}
+
+.news-info {
+    flex-grow: 1;
+}
+
+.news-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between title and date */
+    font-family: 'Roboto', sans-serif;
+}
+
+.news-date {
+    font-size: 0.8em;
+    color: #555; /* Adjust the color as needed */
+    margin-bottom: 10px; /* Space between date and link */
+    font-family: 'Roboto', sans-serif;
+}
+
+.news-link {
+    color: #1a0dab; /* Link color */
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+}
+
+.news-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
